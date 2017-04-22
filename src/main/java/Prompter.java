@@ -51,7 +51,7 @@ public class Prompter {
   }
               
   public void incorrectInput() {
-    System.out.println ("%nIncorrect input!");
+    System.out.println ("Incorrect input!");
   }
   
   public void warnMoreThanMaxItems() {

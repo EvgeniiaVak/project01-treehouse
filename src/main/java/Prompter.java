@@ -1,9 +1,13 @@
 import java.util.Scanner;
 
 public class Prompter {
+  private Scanner scanner;
+  
+  public Prompter () {
+    scanner = new Scanner(System.in);
+  }
   
   public Jar promptForJar () {
-    Scanner scanner = new Scanner (System.in);
     //1. ask for which items
     System.out.println("=============++++ Administrator Mode ++++=============");
     System.out.printf("%nWhat items should be in the jar?%n (e.g. cookies, almonds) - ");
@@ -18,7 +22,6 @@ public class Prompter {
   }
   
   public String promptForAGuess (Jar jar) {
-    Scanner scanner = new Scanner (System.in);
     boolean isValid = false;
     
     System.out.printf("%n%nHow many %s are in the jar?%n(pick a number between 1 and %d): ",
@@ -45,7 +48,6 @@ public class Prompter {
   }
   
   public String promptToRefillTheJar() {
-    Scanner scanner = new Scanner(System.in);
     System.out.println("Do you want to refill the jar? (yes/no)  ");
     return scanner.nextLine();
   }
